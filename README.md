@@ -2,7 +2,7 @@
 
 This is a decentralized web app for automating and removing the corruption in tender biddings.
 
-### [Backend Repo](https://github.com/TenderRelease/backendtenderrelease)
+### [Backend Repo Link](https://github.com/TenderRelease/backendtenderrelease)
 
 Currently there is one tender registere with tender Id 123 and there is one company registered with company name: Company1
 In case the tender registeration deadline is over which is 1 day you can go to admin panel whose credentials are mentioned here downside and add new tender to check the app.
