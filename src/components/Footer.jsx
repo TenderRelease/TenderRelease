@@ -5,7 +5,7 @@ export default function Footer() {
   return (
    
 <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
-    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8" id="bottom-bar">
         <div className="sm:flex sm:items-center sm:justify-between">
             <Link to="/" className="flex items-center mb-4 sm:mb-0">
                 <img src={logo} className="h-10 w-16" alt="Logo" />
