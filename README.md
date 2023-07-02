@@ -7,7 +7,7 @@ This is a decentralized web app for automating and removing the corruption in te
 Currently there is one tender registere with tender Id 123 and there is one company registered with company name: Company1
 In case the tender registeration deadline is over which is 1 day you can go to admin panel whose credentials are mentioned here downside and add new tender to check the app.
 
-Also after registeration NFT can be added in metamask ob binance testnet with the token id as received after registration and contract address as mentioned above in the link and in backend repository.
+### Also after registeration NFT can be added in metamask ob binance testnet with the token id as received after registration and contract address as mentioned above in the link and in backend repository.
 
 ## To check all transactions on the smart contract use the following url: ```https://testnet.bscscan.com/address/0xb23A4FcdC0E4d65fE3ecdDa523d7cC733d2A29aF```
 
