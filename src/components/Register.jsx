@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-
+import { Link } from "react-router-dom";
 
 export default function Register() {
 const [CompanyName,setCompanyName]= useState('');
@@ -14,7 +14,7 @@ const [tenderId,setTenderId]=useState('ID');
 useEffect(()=>{
   axios.get("https://tenderrelease.cyclic.app/getWinner")
   .then((response)=>{
-    if(response.data=="Error")
+    if(response.data==="Error")
     {
       alert(response.data);
     }
@@ -29,7 +29,7 @@ function handleSubmit(){
   axios.post("https://tenderrelease.cyclic.app/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:"0x347062e10cDcB98F05601FD4Bbc806EB96AB1edE"})
   .then((response)=>{
   
-    if(response.data=="Error!"){
+    if(response.data==="Error!"){
       alert('Sorry!! Form has been closed');
     }
     else{
@@ -114,25 +114,25 @@ function handleSubmit(){
           </button>
           <div className="text-center text-sm text-grey-dark mt-4">
             By registering, you agree to the
-            <a onClick={(e)=>{e.preventDefault();}}
+            <Link
               className="no-underline border-b border-grey-dark text-grey-dark"
-              href="#"
+              to="#"
             >
               &nbsp; Terms of Service
-            </a>{" "}
+            </Link>{" "}
             &nbsp;and
-            <a onClick={(e)=>{e.preventDefault();}}
+            <Link
               className="no-underline border-b border-grey-dark text-grey-dark"
-              href="#"
+              to="#"
             >
               &nbsp;Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* <div className="text-grey-dark mt-6">
                     Already have an account? 
-                    <a className="no-underline border-b border-blue text-blue" href="../login/">
+                    <a className="no-underline border-b border-blue text-blue" to="../login/">
                         Log in
                     </a>.
                 </div> */}

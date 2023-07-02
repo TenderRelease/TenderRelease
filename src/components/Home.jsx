@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="">
@@ -15,24 +15,23 @@ export default function Home() {
         }}
       />
     </div>
-    <div className="mx-auto max-w-2xl py-32 sm:py-36 lg:py-32">
+    <div className="mx-auto max-w-2xl py-32 sm:py-36 lg:py-32 px-5">
      
       <div className="text-center">
-        <h1 className="text-2xl font-bold  text-gray-900 sm:text-6xl">
-         
-Welcome to the Road Tenders Registration Portal!
+        <h1 className="text-2xl font-bold  text-gray-900 sm:text-6xl"> 
+        Welcome to the Smart Road Tenders Registration Portal!
         </h1>
         <p className="mt-6 text-lg  text-gray-600">
         We are delighted to introduce our user-friendly website, designed to streamline the process of registering companies for road tenders. Whether you are an established construction company or a budding contractor, this platform aims to make your registration experience efficient, <strong>transparent, decentralized, immutable, secure </strong>and hassle-free.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <a onClick={(e)=>{e.preventDefault();}}
-            href="/register"
+          <Link
+            to="/register"
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Register
-          </a>
-          <a onClick={(e)=>{e.preventDefault();}} href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <a href="https://github.com/TenderRelease/TenderRelease#readme" className="text-sm font-semibold leading-6 text-gray-900">
             Learn more <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -82,10 +81,10 @@ Welcome to the Road Tenders Registration Portal!
           </div>
           <div className="mt-6 relative">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            Secure and Reliable
+            Trustworthy Identity Verification
             </h3>
             <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            We prioritize the security of your data. Our robust authentication system ensures that only authorized representatives can register their companies. Your information is safeguarded using industry-standard security protocols.
+            With blockchain, we can establish a secure and decentralized identity verification system for bidders. Once users have their identities verified on the blockchain, they won't need to undergo repeated identity checks for future bidding processes. This streamlined verification process will save time and enhance the user experience.
             </p>
            
           </div>
@@ -98,10 +97,10 @@ Welcome to the Road Tenders Registration Portal!
           </div>
           <div className="mt-6 relative">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            User-Friendly Online Forms
+            Transparency
             </h3>
             <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            Our online forms are thoughtfully designed to capture specific information from your company. Fill in details such as company profiles, technical capabilities, past project experience, and financial information with ease.
+            Implementing blockchain will make our bidding process transparent and accessible to all participants. Every bid and related information will be recorded on a public ledger, creating an auditable and tamper-proof record of the entire process. This transparency will foster trust and confidence among our users.
             </p>
            
           </div>
@@ -114,10 +113,10 @@ Welcome to the Road Tenders Registration Portal!
           </div>
           <div className="mt-6 relative">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            Automated Validation
+            Dispute Resolution
             </h3>
             <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            To minimize errors and save time, our system incorporates automated validation checks. Ensure that the information you submit meets the specified requirements, avoiding any unnecessary delays.
+            In case of disputes, blockchain technology can facilitate efficient and transparent resolution mechanisms. Immutable records on the blockchain can serve as solid evidence, simplifying the resolution process and reducing the potential for fraud or manipulation. This will ensure a fair and reliable dispute resolution process for all participants.
             </p>
            
           </div>
@@ -130,10 +129,10 @@ Welcome to the Road Tenders Registration Portal!
           </div>
           <div className="mt-6 relative">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-        Decentralized
+            Smart Contracts
             </h3>
             <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            sourabh batayega
+            By utilizing smart contracts, we can automate and enforce bidding rules. These self-executing contracts, coded on the blockchain, will ensure that bids are executed automatically, payments are handled efficiently, and assets or goods are released based on predefined conditions. Smart contracts will reduce the need for manual intervention, making our bidding process more efficient, decentralized and reliable.
             </p>
            
           </div>
@@ -146,19 +145,14 @@ Welcome to the Road Tenders Registration Portal!
           </div>
           <div className="mt-6 relative">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            Transparency and Feedback
+            Proof of Authenticity
             </h3>
             <p className="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-            We value transparency in our processes. We provide regular updates on tender evaluations and awards, ensuring that you are informed every step of the way. We also encourage you to share your feedback on the registration process and website functionality, as we are committed to continuous improvement.
+            Blockchain technology can help establish the authenticity of items being bid on. By recording an item's history, including its origin, ownership transfers, and certifications, on the blockchain, we can provide irrefutable proof of its legitimacy. This will give bidders confidence in the items they are bidding on and reduce the risk of fraud.
             </p>
-           
           </div>
-          
         </div>
       </div>
-
-
-
   </div>
 
   )

@@ -12,7 +12,7 @@ export default function Admin() {
       .post("https://tenderrelease.cyclic.app/login", { username: username, password: password })
       .then((response) => {
         console.log(response.data);
-        if (response.data == true) {
+        if (response.data === true) {
           setVisible("none");
           setVisible2("block");
         }
@@ -29,7 +29,7 @@ export default function Admin() {
       .post("https://tenderrelease.cyclic.app/startTender", { TenderName: name, openTime: expiry,TenderId:id })
       .then((response) => {
         console.log(response.data);
-        if(response.data=="Error!"){
+        if(response.data==="Error!"){
           alert("something went wrong")
         }
         else{

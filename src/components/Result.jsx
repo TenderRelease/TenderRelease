@@ -12,7 +12,7 @@ export default function Result() {
   
   useEffect(() => {
     axios.get("https://tenderrelease.cyclic.app/getWinner").then((response) => {
-      if (response.data == "Error") {
+      if (response.data === "Error") {
         alert(response.data);
       } else {
         setTenderId(response.data.tenderId);
@@ -26,7 +26,7 @@ export default function Result() {
     axios
       .get("https://tenderrelease.cyclic.app/tenderDetails/" + tokenId)
       .then((response) => {
-        if (response.data == "Error!!") {
+        if (response.data === "Error!!") {
           alert("Error");
         } else {
           console.log(response.data);
