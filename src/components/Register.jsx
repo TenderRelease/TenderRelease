@@ -38,7 +38,8 @@ function handleSubmit(){
     }
     else{
       console.log(response.data);
-      alert('Registered Successfully!! : ' + response.data)
+      alert('Registered Successfully!! : tokenId' + response.data.tokenId+", Transaction Hash : " + response.data.transactionHash
+      )
       setVisible("none");
     }
   })
