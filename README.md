@@ -31,7 +31,8 @@ https://tenderrelease-61d5.onrender.com/admin
 
 
 This route is used for registering new companies against the tender mentioned on the page for which bidding is live at that time.
-To check your transaction hash use the following url: ```https://testnet.bscscan.com/tx/{transactionHash}```
+
+## To check your transaction hash use the following url: ```https://testnet.bscscan.com/tx/{transactionHash}```
 
 ``` Register route
 https://tenderrelease-61d5.onrender.com/register
