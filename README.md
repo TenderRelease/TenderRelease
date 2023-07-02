@@ -2,7 +2,7 @@
 
 This is a decentralized web app for automating and removing the corruption in tender biddings.
 
-## To check all transactions on the smart contract use the following url: ```[Smart Contract](https://testnet.bscscan.com/address/0x87219d4b9A4d44b7660F6a198E2F5298e77E6CA2)```
+## To check all transactions on the smart contract use the following url: ```https://testnet.bscscan.com/address/0x87219d4b9A4d44b7660F6a198E2F5298e77E6CA2```
 
 
 ## Running the app
