@@ -10,6 +10,7 @@ const [Email,setEmail]= useState('');
 const [Phone,setPhone]= useState('');
 const [Din,setDin]= useState('');
 const [Cost,setCost]= useState('');
+const [Address,setAddress]= useState('');
 const [tenderId,setTenderId]=useState('Getting Id....');
 const [visible, setVisible] = useState("none");
 
@@ -29,7 +30,7 @@ useEffect(()=>{
 
 function handleSubmit(){
   setVisible("block");
-  axios.post("https://tenderrelease.cyclic.app/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:"0x347062e10cDcB98F05601FD4Bbc806EB96AB1edE"})
+  axios.post("https://tenderrelease.cyclic.app/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:Address})
   .then((response)=>{
   
     if(response.data==="Error!"){
@@ -90,6 +91,13 @@ function handleSubmit(){
             className="block border border-grey-light w-full p-3 rounded mb-4"
             name="email"
             placeholder="Email"
+          />
+          <input
+            type="text"
+            onChange={(e)=>setAddress(e.target.value)}
+            className="block border border-grey-light w-full p-3 rounded mb-4"
+            name="address"
+            placeholder="Wallet Address"
           />
           <input
             type="text"
