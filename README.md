@@ -1,5 +1,7 @@
 # TenderRelease
 
+# Full Stack Track
+
 This is a decentralized web app for automating and removing the corruption in tender biddings.
 
 ### [Backend Repo Link](https://github.com/TenderRelease/backendtenderrelease)
