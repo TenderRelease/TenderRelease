@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import { Link } from "react-router-dom";
+import LinearProgress from '@mui/material/LinearProgress';
 
 export default function Register() {
 const [CompanyName,setCompanyName]= useState('');
@@ -9,7 +10,8 @@ const [Email,setEmail]= useState('');
 const [Phone,setPhone]= useState('');
 const [Din,setDin]= useState('');
 const [Cost,setCost]= useState('');
-const [tenderId,setTenderId]=useState('ID');
+const [tenderId,setTenderId]=useState('Getting Id....');
+const [visible, setVisible] = useState("none");
 
 useEffect(()=>{
   axios.get("https://tenderrelease.cyclic.app/getWinner")
@@ -26,15 +28,18 @@ useEffect(()=>{
 },[tenderId])
 
 function handleSubmit(){
+  setVisible("block");
   axios.post("https://tenderrelease.cyclic.app/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:"0x347062e10cDcB98F05601FD4Bbc806EB96AB1edE"})
   .then((response)=>{
   
     if(response.data==="Error!"){
       alert('Sorry!! Form has been closed');
+      setVisible("none");
     }
     else{
       console.log(response.data);
       alert('Registered Successfully')
+      setVisible("none");
     }
   })
   .catch((e)=>{
@@ -112,6 +117,7 @@ function handleSubmit(){
           >
             Register
           </button>
+          <LinearProgress style={{ display: visible }} color="success" />
           <div className="text-center text-sm text-grey-dark mt-4">
             By registering, you agree to the
             <Link
@@ -129,13 +135,6 @@ function handleSubmit(){
             </Link>
           </div>
         </div>
-
-        {/* <div className="text-grey-dark mt-6">
-                    Already have an account? 
-                    <a className="no-underline border-b border-blue text-blue" to="../login/">
-                        Log in
-                    </a>.
-                </div> */}
       </div>
     </div>
   );

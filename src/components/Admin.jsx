@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import LinearProgress from '@mui/material/LinearProgress';
 export default function Admin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -8,6 +9,7 @@ export default function Admin() {
   const [expiry, setExpiry] = useState("");
 
   function handleSubmit() {
+    setVisible3("block");
     axios
       .post("https://tenderrelease.cyclic.app/login", { username: username, password: password })
       .then((response) => {
@@ -15,9 +17,11 @@ export default function Admin() {
         if (response.data === true) {
           setVisible("none");
           setVisible2("block");
+          setVisible3("none");
         }
         else{
           console.log('Error!!')
+          setVisible3("none");
         }
       })
       .catch((e) => {
@@ -25,15 +29,18 @@ export default function Admin() {
       });
   }
   function handleSubmit2() {
+    setVisible3("block");
     axios
       .post("https://tenderrelease.cyclic.app/startTender",{ TenderName: name, openTime: expiry,TenderId:id })
       .then((response) => {
         console.log(response.data);
         if(response.data==="Error!"){
           alert("something went wrong")
+          setVisible3("none");
         }
         else{
           alert('Tender Upload Successfully!!');
+          setVisible3("none");
         }
       })
       .catch((e) => {
@@ -43,6 +50,8 @@ export default function Admin() {
 
   const [visible, setVisible] = useState("block");
   const [visible2, setVisible2] = useState("none");
+  const [visible3, setVisible3] = useState("none");
+  const [visible4, setVisible4] = useState("none");
   return (
     <div className="containers mx-auto   my-36">
       <div
@@ -82,6 +91,7 @@ export default function Admin() {
             >
               Login
             </button>
+            <LinearProgress style={{ display: visible3 }} color="success" />
           </div>
         </div>
       </div>
@@ -118,6 +128,7 @@ export default function Admin() {
             >
          Upload Tender
             </button>
+            <LinearProgress style={{ display: visible4 }} color="success" />
           </div>
         </div>
       </div>
