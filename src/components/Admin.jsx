@@ -26,7 +26,7 @@ export default function Admin() {
   }
   function handleSubmit2() {
     axios
-      .post("https://tenderrelease.cyclic.app/startTender", {withCredentials:true},{ TenderName: name, openTime: expiry,TenderId:id })
+      .post("https://tenderrelease.cyclic.app/startTender",{ TenderName: name, openTime: expiry,TenderId:id })
       .then((response) => {
         console.log(response.data);
         if(response.data==="Error!"){
