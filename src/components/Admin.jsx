@@ -29,18 +29,18 @@ export default function Admin() {
       });
   }
   function handleSubmit2() {
-    setVisible3("block");
+    setVisible4("block");
     axios
       .post("https://tenderrelease.cyclic.app/startTender",{ TenderName: name, openTime: expiry,TenderId:id })
       .then((response) => {
         console.log(response.data);
         if(response.data==="Error!"){
           alert("something went wrong")
-          setVisible3("none");
+          setVisible4("none");
         }
         else{
-          alert('Tender Upload Successfully!!');
-          setVisible3("none");
+          alert('Tender Upload Successfully!! : '+response.data);
+          setVisible4("none");
         }
       })
       .catch((e) => {

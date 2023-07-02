@@ -38,7 +38,7 @@ function handleSubmit(){
     }
     else{
       console.log(response.data);
-      alert('Registered Successfully')
+      alert('Registered Successfully!! : ' + response.data)
       setVisible("none");
     }
   })
