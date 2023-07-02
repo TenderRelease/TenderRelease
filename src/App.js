@@ -9,8 +9,8 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 function App() {
   return (
+    <div className="App">
     <BrowserRouter>
-      <div className="App">
       <Navbar />
         <Routes>
 
@@ -21,8 +21,8 @@ function App() {
       
         </Routes>
         <Footer/>
-      </div>
     </BrowserRouter>
+    </div>
   );
 }
 export default App;
