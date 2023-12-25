@@ -62,4 +62,4 @@ The app has been deployed on render using this github repository and the backend
 
 ### [Deployed App Link](https://tenderrelease-61d5.onrender.com/)
 
-Made with ❤️ by Team Noobs - [Sourabh Choudhary](https://github.com/SD-IITKGP), [Mahim Jain](https://github.com/jainmahim) and [Abhishek Sarjaliya](https://github.com/Abhi21sar)
+Made with ❤️ by Team Noobs
