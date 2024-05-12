@@ -15,7 +15,7 @@ const [tenderId,setTenderId]=useState('Getting Id....');
 const [visible, setVisible] = useState("none");
 
 useEffect(()=>{
-  axios.get("https://tenderrelease.cyclic.app/getWinner")
+  axios.get("https://backendtenderrelease.onrender.com/getWinner")
   .then((response)=>{
     if(response.data==="Error")
     {
@@ -30,7 +30,7 @@ useEffect(()=>{
 
 function handleSubmit(){
   setVisible("block");
-  axios.post("https://tenderrelease.cyclic.app/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:Address})
+  axios.post("https://backendtenderrelease.onrender.com/register",{ownerName:OwnerName,email:Email,phoneNumber:Phone,company:CompanyName,din:Din,bid:Cost,address:Address})
   .then((response)=>{
   
     if(response.data==="Error!"){
