@@ -35,7 +35,7 @@ export default function Result() {
     async function chk1(){
       setVisible("block");
       await axios
-      .get("https://tenderrelease.cyclic.app/tenderDetails/" + tokenId)
+      .get("https://backendtenderrelease.onrender.com/tenderDetails/" + tokenId)
       .then((response) => {
         if (response.data === "Error!!") {
           alert("Error");
@@ -61,7 +61,7 @@ export default function Result() {
       });
     }
     async function chk2(){
-    await axios.get("https://tenderrelease.cyclic.app/getWinner").then((response) => {
+    await axios.get("https://backendtenderrelease.onrender.com/getWinner").then((response) => {
       if (response.data === "Error") {
         alert(response.data);
       } else {
