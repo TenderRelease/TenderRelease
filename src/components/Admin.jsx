@@ -11,7 +11,7 @@ export default function Admin() {
   function handleSubmit() {
     setVisible3("block");
     axios
-      .post("https://tenderrelease.cyclic.app/login", { username: username, password: password })
+      .post("https://backendtenderrelease.onrender.com/login", { username: username, password: password })
       .then((response) => {
         console.log(response.data);
         if (response.data === true) {
@@ -31,7 +31,7 @@ export default function Admin() {
   function handleSubmit2() {
     setVisible4("block");
     axios
-      .post("https://tenderrelease.cyclic.app/startTender",{ TenderName: name, openTime: expiry,TenderId:id })
+      .post("https://backendtenderrelease.onrender.com/startTender",{ TenderName: name, openTime: expiry,TenderId:id })
       .then((response) => {
         console.log(response.data);
         if(response.data==="Error!"){
