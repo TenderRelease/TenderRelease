@@ -19,10 +19,10 @@ export default function Home() {
      
       <div className="text-center">
         <h1 className="text-2xl font-bold  text-gray-900 sm:text-6xl"> 
-        Welcome to the Smart Road Tenders Registration Portal!
+        Welcome to the Smart Tenders Registration Portal!
         </h1>
         <p className="mt-6 text-lg  text-gray-600">
-        We are delighted to introduce our user-friendly website, designed to streamline the process of registering companies for road tenders. Whether you are an established construction company or a budding contractor, this platform aims to make your registration experience efficient, <strong>transparent, decentralized, immutable, secure </strong>and hassle-free.
+        We are delighted to introduce our user-friendly website, designed to streamline the process of registering companies for tenders. Whether you are an established construction company or a budding contractor, this platform aims to make your registration experience efficient, <strong>transparent, decentralized, immutable, secure </strong>and hassle-free.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
